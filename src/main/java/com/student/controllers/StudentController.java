@@ -27,4 +27,10 @@ public class StudentController {
 		return "student-list";
 	}
 	
+	@GetMapping("/addStudent")
+	public String addStudent() {
+		
+		return "add-student";
+	}
+	
 }
