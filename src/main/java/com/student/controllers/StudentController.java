@@ -22,9 +22,7 @@ public class StudentController {
 		
 		for(Student student : studentList) {
 			System.out.println("Name : "+ student.getName());
-		}
-		System.out.println("hello from show Student List");
-		
+		}		
 		model.addAttribute("students",studentList);
 		return "student-list";
 	}

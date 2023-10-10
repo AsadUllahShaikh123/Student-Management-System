@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>Student Page Coming Soon .....</h1>
+	${ students }
 </body>
 </html>
