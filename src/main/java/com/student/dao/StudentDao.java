@@ -7,4 +7,5 @@ import com.student.model.Student;
 public interface StudentDao {
 
 	List<Student> loadStudents();
+	void saveStudent(Student student);
 }

@@ -43,5 +43,16 @@ public class StudentDaoImpl implements StudentDao{
 		
 		return studentList;
 	}
+	@Override
+	public void saveStudent(Student student) {
+		
+		Object[] sqlParameters = {student.getName(),student.getMobile(),student.getCountry()};
+		
+		String sql = "insert into students(name,mobile,country) values(?,?,?)";
+		
+		jdbc.update(sql,sqlParameters);
+		System.out.println("1.. record updated ");
+		
+	}
 
 }
