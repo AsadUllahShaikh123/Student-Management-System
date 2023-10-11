@@ -28,4 +28,12 @@ public class StudentServiceImpl implements StudentService {
 		return student;
 	}
 
+	@Override
+	public void update(Student student) {
+		dao.update(student);		
+	}
+	public void delete(int id) {
+		dao.delete(id);
+	}
+
 }

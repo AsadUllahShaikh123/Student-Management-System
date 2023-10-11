@@ -12,6 +12,7 @@
 	<div align="center">
 		<h1>Add Student</h1>
 		<form:form action="saveStudent" modelAttribute="students" method="POST">
+			<form:hidden path="id"/>
 			<label>Name:</label>
 			<form:input path="name" />
 

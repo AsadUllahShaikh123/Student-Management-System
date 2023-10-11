@@ -54,7 +54,7 @@ public class StudentDaoImpl implements StudentDao {
 		String sql = "insert into students(name,mobile,country) values(?,?,?)";
 
 		jdbc.update(sql, sqlParameters);
-		System.out.println("1.. record updated ");
+		System.out.println("1.. record saved ");
 
 	}
 
@@ -65,6 +65,20 @@ public class StudentDaoImpl implements StudentDao {
 		Student student = jdbc.queryForObject(sql, getRowMapper(), id);
 
 		return student;
+	}
+
+	@Override
+	public void update(Student student) {
+		
+		String sql = "update students set name =? , mobile =? , country = ? where id =? ";
+		Object [] args = {student.getName(),student.getMobile(),student.getCountry(),student.getId()};
+		jdbc.update(sql, args);
+		System.out.println("1 record updated succesfully ...");
+	}
+	
+	public void delete(int id) {
+		String sql = "delete from students where id = ?";
+		jdbc.update(sql,id);
 	}
 
 }
