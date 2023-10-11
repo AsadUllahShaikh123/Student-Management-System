@@ -11,6 +11,9 @@
 <body>
 	<h1 align="center">Student Page Coming Soon .....</h1>
 	<div align="center">
+	<form action="addStudent">
+		<input type="submit" value="Add"/>
+	</form>
 		<table border="1">
 
 			<thead>

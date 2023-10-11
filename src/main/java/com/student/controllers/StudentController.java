@@ -7,20 +7,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.student.dao.StudentDao;
 import com.student.model.Student;
+import com.student.service.StudentService;
 
 @Controller
 public class StudentController {
 
 	@Autowired
-	private StudentDao dao;
+	private StudentService service;
 	@GetMapping("/showStudent")
 	public String ShowStudentList(Model model) {
 		
-		List<Student> studentList = dao.loadStudents();	
+		List<Student> studentList = service.loadStudents();	
 		model.addAttribute("students",studentList);
 		return "student-list";
 	}
@@ -40,7 +39,7 @@ public class StudentController {
 		
 		System.out.print(student);
 		
-		dao.saveStudent(student);
+		service.saveStudent(student);
 		return "redirect:/showStudent";
 	}
 	
