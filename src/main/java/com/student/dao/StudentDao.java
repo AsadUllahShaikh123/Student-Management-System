@@ -8,4 +8,5 @@ public interface StudentDao {
 
 	List<Student> loadStudents();
 	void saveStudent(Student student);
+	Student getStudent(int id);
 }

@@ -22,6 +22,7 @@
 					<td>Name</td>
 					<td>Mobile</td>
 					<td>Country</td>
+					<td></td>
 				</tr>
 			</thead>
 
@@ -31,6 +32,7 @@
 					<td>${ student.name }</td>
 					<td>${ student.mobile }</td>
 					<td>${ student.country }</td>
+					<td><a href="updateStudent?userId=${ student.id }">Update</a></td>
 				</tr>
 			</c:forEach>
 

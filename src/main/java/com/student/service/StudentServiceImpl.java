@@ -22,5 +22,10 @@ public class StudentServiceImpl implements StudentService {
 	public void saveStudent(Student student) {
 		dao.saveStudent(student);
 	}
+	
+	public Student getStudent(int id) {
+		Student student = dao.getStudent(id);
+		return student;
+	}
 
 }
