@@ -7,22 +7,27 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
 </head>
 <body>
 	<h1 align="center">Student Page Coming Soon .....</h1>
-	<div align="center">
+	<div class="container">
 		<form action="addStudent">
-			<input type="submit" value="Add" />
+			<button class="btn btn-primary mb-2" type="submit">Add Student</button>
 		</form>
-		<table border="1">
+		<table class="table">
 
-			<thead>
+			<thead class="table-dark">
 				<tr>
 					<td>ID</td>
 					<td>Name</td>
 					<td>Mobile</td>
 					<td>Country</td>
-					<td></td>
+					
 				</tr>
 			</thead>
 
@@ -32,12 +37,13 @@
 					<td>${ student.name }</td>
 					<td>${ student.mobile }</td>
 					<td>${ student.country }</td>
-					<td><a href="updateStudent?userId=${ student.id }">Update</a></td>
-					<td><a href="deleteStudent?userId=${ student.id }"
+					<td><a class="btn btn-primary"
+						href="updateStudent?userId=${ student.id }" role="button">Update</a>
+					<td><a class="btn btn-danger" href="deleteStudent?userId=${ student.id }"
 						onclick="
 							if(! confirm('Are you sure  you want to delete this student? ')) return false
 							
-							">Delete</a></td>
+							" role="button">Delete</a></td>
 				</tr>
 			</c:forEach>
 
